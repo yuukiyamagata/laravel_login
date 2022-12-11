@@ -23,6 +23,13 @@
     </div>
 @endif
 
+@if (session('login_errror')){
+  <div class="alert alert-sucess">
+    {{ session('login_error') }}
+  </div>
+}
+@endif
+
   <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address"  autofocus>
   <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" >
   <button type="submit" class="btn">ログイン</button>
