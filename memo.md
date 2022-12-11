@@ -21,5 +21,20 @@
   2. Model Factory モデルのテストデータを定義する
   3. Faker ランダムな値を生成する
 
+MVC
+Model
+View
+Controller
+
+バリデーションを設定する
+Illuminate\Http\Request
+validateメソッドを利用する
+=> 失敗するとエラーレスポンスを返す
+
+主に2パターンの指定方法
+1. 直接コントローラー内に記述する
+2. フォームリクエスト作成する
+
+
 
 
