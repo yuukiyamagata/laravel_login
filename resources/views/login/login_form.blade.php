@@ -23,12 +23,21 @@
     </div>
 @endif
 
-@if (session('login_errror')){
+{{-- @if(session('logout'))
+    <div class="alert alert-danger">
+      {{ session('logout') }}
+    </div>
+@endif --}}
+{{-- @if (session('login_errror')){
   <div class="alert alert-sucess">
     {{ session('login_error') }}
-  </div>
-}
-@endif
+  </div>}
+@endif --}}
+
+<x-alert type="danger" :session="session('logout')"></x-alert>
+<x-alert type="danger" :session="session('login_error')"/>
+
+
 
   <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address"  autofocus>
   <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" >
