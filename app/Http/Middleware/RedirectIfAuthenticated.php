@@ -23,6 +23,7 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
+                // ログイン済みの場合はguestに行こうとすればhomeに返す
                 return redirect(RouteServiceProvider::HOME);
             }
         }
